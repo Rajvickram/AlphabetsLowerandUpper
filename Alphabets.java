@@ -1,3 +1,6 @@
+import java.util.*;
+
+
 class Alphabets {
     static void displayForwardAlphabetsLowercase() {
 
@@ -77,5 +80,51 @@ class Alphabets {
                 System.out.println(ch);
             }
         }
+    }
+}
+
+
+class OK {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        boolean data = true;
+
+        do {
+            System.out.println("Press 1 For Display Forward Lower Case : ");
+            System.out.println("Press 2 For Display Backward Lower Case : ");
+            System.out.println("Press 3 For Display Forward Upper Case : ");
+            System.out.println("Press 4 For Display Backward Upper Case : ");
+            System.out.println("Please Select Your Choice : ............... ");
+
+            int choice = sc.nextInt();
+
+            switch (choice) {
+                case 1 : {
+                    Alphabets.displayForwardAlphabetsLowercase();
+                }break;
+
+                case 2 : {
+                    Alphabets.displayBackwardAlphabetsLowercase();
+                }break;
+
+                case 3 : {
+                    Alphabets.displayForwardAlphabetsUppercase();
+                }break;
+
+                case 4 : {
+                    Alphabets.displayBackwardAlphabetsUppercase();
+                }break;
+
+                case 5 : {
+                    data = false;
+                    System.out.println("Thanks for Pressing us..............");
+                }break;
+
+                default : {
+                    System.out.println("Thanks for Followeing us.................");
+                }
+            }
+        } while(data);
     }
 }
